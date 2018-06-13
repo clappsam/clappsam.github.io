@@ -1,17 +1,17 @@
-const FOLDER = '1to5/', EXT = '.mp3',
-      INDEX_START1 = 1, INDEX_END1 = 5,
+const FOLDER = 'Sounds/', EXT = '.mp3',
+      INDEX_START1 = 1, INDEX_END1 = 58,
       LEN_SOUND1 = 1 + INDEX_END1 - INDEX_START1,
       sounds1 = Array(LEN_SOUND1);
 
-const FOLDER2 = 'AtoE/',
-      INDEX_START2 = 1, INDEX_END2 = 5,
+const FOLDER2 = 'Voices/',
+      INDEX_START2 = 1, INDEX_END2 = 57,
       LEN_SOUND2 = 1 + INDEX_END2 - INDEX_START2,
       sounds2 = Array(LEN_SOUND2);
  
 var idx1 = 0, idx2 = 0;
 var button;
 var startTime = 0;
-const MAX_TIME_MS = 10 * 1000;
+const MAX_TIME_MS = 400 * 1000; // 5 mins
 
 function preload() {
   for (let i = 0; i < LEN_SOUND1; ++i) {
