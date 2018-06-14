@@ -1,10 +1,10 @@
 const FOLDER = 'Sounds/', EXT = '.mp3',
-      INDEX_START1 = 1, INDEX_END1 = 58,
+      INDEX_START1 = 1, INDEX_END1 = 85,
       LEN_SOUND1 = 1 + INDEX_END1 - INDEX_START1,
       sounds1 = Array(LEN_SOUND1);
 
 const FOLDER2 = 'Voices/',
-      INDEX_START2 = 1, INDEX_END2 = 57,
+      INDEX_START2 = 1, INDEX_END2 = 54,
       LEN_SOUND2 = 1 + INDEX_END2 - INDEX_START2,
       sounds2 = Array(LEN_SOUND2);
  
@@ -47,7 +47,6 @@ function setup() {
 //}
  
 function mousePressed() {
-
     playNext();
     playNext2();
     var d = new Date();
@@ -56,7 +55,7 @@ function mousePressed() {
     textAlign(CENTER);
     fill(255);
     noStroke();
-    text("EVERYBODYS TALKIN", width/2, height/2);
+    text("EVERYBODY'S TALKING ABOUT IT", width/2, height/2);
 }
 
 function playNext() {
