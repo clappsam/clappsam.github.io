@@ -11,7 +11,7 @@ const FOLDER2 = 'Voices/',
 var idx1 = 0, idx2 = 0;
 var button;
 var startTime = 0;
-const MAX_TIME_MS = 400 * 1000; // 5 mins
+const MAX_TIME_MS = 480 * 1000; // 8 minutes in milliseconds
 
 function preload() {
   for (let i = 0; i < LEN_SOUND1; ++i) {
