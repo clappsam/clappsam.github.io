@@ -11,9 +11,11 @@ const FOLDER2 = 'Voices/',
 var idx1 = 0, idx2 = 0;
 var button;
 var startTime = 0;
+var playedImage;
 const MAX_TIME_MS = 400 * 1000; // 5 mins
 
 function preload() {
+  playedImage = loadImage("EverybodysTalkin.jpg");
   for (let i = 0; i < LEN_SOUND1; ++i) {
     sounds1[i] = loadSound(FOLDER + (i + INDEX_START1) + EXT);
     sounds1[i].onended(playNext);
@@ -29,15 +31,21 @@ function preload() {
 function setup() {
   shuffle(sounds1, true);
   shuffle(sounds2, true);
-  createCanvas(200, 200);
+  createCanvas(windowWidth, windowHeight);
+    //leave in!!! 
+}
+
+function draw() {
+  background(0);
   textAlign(CENTER);
-  fill(100);
+  fill(255);
   noStroke();
   text("CLICK TO PLAY", width/2, height/2);
-    //leave in!!! 
 }
  
 function mousePressed() {
+    imageMode(CENTER);
+    image(playedImage, width/2, height/2);
     playNext();
     playNext2();
     var d = new Date();
