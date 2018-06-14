@@ -11,7 +11,7 @@ const FOLDER2 = 'Voices/',
 var idx1 = 0, idx2 = 0;
 var button;
 var startTime = 0;
-const MAX_TIME_MS = 480 * 1000; // 8 minutes in milliseconds
+const MAX_TIME_MS = 420 * 1000; // 7 minutes in milliseconds
 
 function preload() {
   for (let i = 0; i < LEN_SOUND1; ++i) {
@@ -38,14 +38,6 @@ function setup() {
     //leave in!!! 
 }
 
-//function draw() {
-//  background(0);
-//  textAlign(CENTER);
-//  fill(255);
-//  noStroke();
-//  text("CLICK TO PLAY", width/2, height/2);
-//}
- 
 function mousePressed() {
     playNext();
     playNext2();
