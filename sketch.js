@@ -11,11 +11,9 @@ const FOLDER2 = 'Voices/',
 var idx1 = 0, idx2 = 0;
 var button;
 var startTime = 0;
-var playedImage;
 const MAX_TIME_MS = 400 * 1000; // 5 mins
 
 function preload() {
-  playedImage = loadImage("EverybodysTalkin.jpg");
   for (let i = 0; i < LEN_SOUND1; ++i) {
     sounds1[i] = loadSound(FOLDER + (i + INDEX_START1) + EXT);
     sounds1[i].onended(playNext);
@@ -32,24 +30,33 @@ function setup() {
   shuffle(sounds1, true);
   shuffle(sounds2, true);
   createCanvas(windowWidth, windowHeight);
+  background(255);
+  textAlign(CENTER);
+  fill(0);
+  noStroke();
+  text("CLICK TWICE", width/2, height/2);
     //leave in!!! 
 }
 
-function draw() {
-  background(0);
-  textAlign(CENTER);
-  fill(255);
-  noStroke();
-  text("CLICK TO PLAY", width/2, height/2);
-}
+//function draw() {
+//  background(0);
+//  textAlign(CENTER);
+//  fill(255);
+//  noStroke();
+//  text("CLICK TO PLAY", width/2, height/2);
+//}
  
 function mousePressed() {
-    imageMode(CENTER);
-    image(playedImage, width/2, height/2);
+
     playNext();
     playNext2();
     var d = new Date();
     startTime = d.getTime();
+    background(0);
+    textAlign(CENTER);
+    fill(255);
+    noStroke();
+    text("EVERYBODYS TALKIN", width/2, height/2);
 }
 
 function playNext() {
